@@ -14,6 +14,7 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
@@ -26,78 +27,81 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <span id="currentDay" class="lead"></span>
     </header>
-    <div class="container">
+    <section class="container-fluid mx-auto">
+      <div class = "row"></div>
       <!-- Timeblocks go here -->
-      <table class="table">
+      <table class="time-block table col-12 col-md-12 col-lg-12">
         <thead>
           <tr>
-            <th scope="col">Time</th>
-            <th scope="col">Activity</th>
-            <th scope="col"></th>
+            <td scope="col">Time</td>
+            <td scope="col">Activity</td>
+            <td scope="col"></td>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">9AM</th>
-            <td><input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example"></td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th data-time = "09" scope="col">0900</th>
+            <td><input class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example"></td>
+            <td class= "saveBtn">Save</td>
+            <td></td>
           </tr>
           <tr>
-            <th scope="row">10AM</th>
-            <td><input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example"></td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <th data-time = "10" scope="col">1000</th>
+            <td><input class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example"></td>
+            <td class= "saveBtn">Save</td>
+            <td></td>
           </tr>
           <tr>
-            <th scope="row">11AM</th>
-            <td><input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example"></td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <th data-time = "11" scope="col">1100</th>
+            <td><input class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example"></td>
+            <td class= "saveBtn">Save</td>
+            <td></td>
           </tr>
           <tr>
-            <th scope="row">12PM</th>
-            <td><input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example"></td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <th data-time = "12" scope="col">1200</th>
+            <td><input class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example"></td>
+            <td class= "saveBtn">Save</td>
+            <td></td>
           </tr>
           <tr>
-            <th scope="row">1PM</th>
-            <td><input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example"></td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <th data-time = "13" scope="col">1300</th>
+            <td><input class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example"></td>
+            <td class= "saveBtn">Save</td>
+            <td></td>
           </tr>
           <tr>
-            <th scope="row">2PM</th>
-            <td><input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example"></td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <th data-time = "14" scope="col">1400</th>
+            <td><input class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example"></td>
+            <td class= "saveBtn">Save</td>
+            <td></td>
           </tr>
           <tr>
-            <th scope="row">3PM</th>
-            <td><input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example"></td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <th data-time = "15" scope="col">1500</th>
+            <td><input class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example"></td>
+            <td class= "saveBtn">Save</td>
+            <td></td>
           </tr>
           <tr>
-            <th scope="row">4PM</th>
-            <td><input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example"></td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <th data-time = "16" scope="col">1600</th>
+            <td><input class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example"></td>
+            <td class= "saveBtn">Save</td>
+            <td></td>
           </tr>
           <tr>
-            <th scope="row">5PM</th>
-            <td><input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" aria-label=".form-control-lg example"></td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <th data-time = "17" scope="col">1700</th>
+            <td><input class="form-control form-control-lg" type="text" placeholder="" aria-label=".form-control-lg example"></td>
+            <td class= "saveBtn">Save</td>
+            <td></td>
           </tr>
         </tbody>
       </table>
     </div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src = "./Develop/script.js"></script>
   </body>
 </html>
