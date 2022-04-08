@@ -4,11 +4,13 @@
  
  var currentTime = moment().format('HH');
 
+ var saveButton = document.querySelector(".saveBtn");
+
  console.log(thElArray);
 // Display Time (Day Month, Year)
 displayTime()
 function displayTime() {
-    var rightNow = moment().format('dddd, MMMM do');
+    var rightNow = moment().format('dddd, MMMM Do');
     timeDisplayEl.text(rightNow);
   }
 
@@ -30,3 +32,9 @@ if(currentTime > card){
 
 
 // if you click the "save btn" save input in that row to local storage
+    saveButton.addEventListener("click", function(){
+        var taskEntry = document.querySelector(".form-control")
+
+        localStorage.setItem("form-control", JSON.stringify(taskEntry));
+    })
+  
