@@ -5,7 +5,8 @@
  var currentTime = moment().format('HH');
 
  var saveBtnEl = $(".saveBtn");
- var taskEntry = document.querySelectorAll("#entry")
+
+ var myArray = [];
 
  console.log(thElArray);
 // Display Time (Day Month, Year)
@@ -36,9 +37,18 @@ if(currentTime > card){
 
 saveBtnEl.on('click', function (event) {
     event.preventDefault();
+    var idtext = $(event.target).attr("data-id");
+    console.log(event.target);
 
-    var taskEntry = document.querySelectorAll("#entry")
+    var task ={
+        taskhour: idtext,
+        taskDe: $("#"+idtext).val()
+    }
+    myArray.push(task)
 
-    localStorage.setItem("entry", JSON.stringify(taskEntry));
+    localStorage.setItem("entry", JSON.stringify(myArray));
     })
 ;
+  // // var decriptionEL = $(event.target).prev().val();
+
+    // var taskEntry = document.querySelectorAll("#entry")
