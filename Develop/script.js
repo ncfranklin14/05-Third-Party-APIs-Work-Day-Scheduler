@@ -34,6 +34,11 @@ if(currentTime > card){
 
 
 // if you click the "save btn" save input in that row to local storage
+var entries = JSON.parse(localStorage.getItem("entry")) 
+    for(i=0; i< entries.length; i++) {
+        $("#"+entries[i].taskhour).val(entries[i].taskDe)
+    }
+
 
 saveBtnEl.on('click', function (event) {
     event.preventDefault();
@@ -49,6 +54,3 @@ saveBtnEl.on('click', function (event) {
     localStorage.setItem("entry", JSON.stringify(myArray));
     })
 ;
-  // // var decriptionEL = $(event.target).prev().val();
-
-    // var taskEntry = document.querySelectorAll("#entry")
